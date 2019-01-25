@@ -1,0 +1,125 @@
+<Project>
+  <Name>GGJ</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>UML</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>GameManager</Name>
+        <Access>Public</Access>
+        <Location left="341" top="350" />
+        <Size width="162" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public int score</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Camera</Name>
+        <Access>Public</Access>
+        <Location left="556" top="350" />
+        <Size width="162" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Transform target</Member>
+        <Member type="Method">public void Follow()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NavmeshAgent</Name>
+        <Access>Public</Access>
+        <Location left="768" top="350" />
+        <Size width="196" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private float movementSpeed</Member>
+        <Member type="Method">public void MoveTo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Letter</Name>
+        <Access>Public</Access>
+        <Location left="896" top="598" />
+        <Size width="162" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Transform target</Member>
+        <Member type="Field">public float happinessEffect</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Parent</Name>
+        <Access>Public</Access>
+        <Location left="645" top="598" />
+        <Size width="182" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private float happiness</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UI</Name>
+        <Access>Public</Access>
+        <Location left="341" top="598" />
+        <Size width="229" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Text scoreText</Member>
+        <Member type="Field">public Text happinessParentText</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PlayerMovement</Name>
+        <Access>Public</Access>
+        <Location left="1017" top="350" />
+        <Size width="162" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public float speed</Member>
+        <Member type="Method">private void Rotate()</Member>
+        <Member type="Method">private void Movement()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Spawner</Name>
+        <Access>Public</Access>
+        <Location left="1234" top="350" />
+        <Size width="203" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;Transform&gt; letters</Member>
+        <Member type="Field">public List&lt;Transform&gt; spawnLocations</Member>
+        <Member type="Field">public List&lt;Transform&gt; currentLetters</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="1017" top="203" />
+        <Size width="162" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void Attack()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Event</Name>
+        <Access>Public</Access>
+        <Location left="1234" top="598" />
+        <Size width="162" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public float cooldown</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="4" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
