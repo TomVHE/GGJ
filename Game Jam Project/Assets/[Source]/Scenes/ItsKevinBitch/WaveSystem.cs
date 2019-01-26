@@ -77,6 +77,9 @@ public class WaveSystem : MonoBehaviour
 
     public void CheckForEnemies()
     {
-        Invoke("NextStep",5);
+        if(aliveEnemies == 0)
+        {
+            Invoke("NextStep",5);
+        }
     }
 }
