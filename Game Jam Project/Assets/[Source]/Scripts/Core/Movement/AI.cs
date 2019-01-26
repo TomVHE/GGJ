@@ -1,16 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
+using KinematicCharacterController.Walkthrough.NavMeshExample;
 
 namespace Core.Movement
 {
     public class AI : MonoBehaviour
     {
-        public UberCharacterController Character;
-        public Transform Destination;
+        //public MyCharacterController character;
+        public UberCharacterController character;
+        [NonSerialized] public Vector3 destination;
 
         private NavMeshPath _path;
         private Vector3[] _pathCorners = new Vector3[16];
@@ -28,33 +31,45 @@ namespace Core.Movement
         
         private void HandleCharacterNavigation()
         {
-            if(NavMesh.CalculatePath(Character.transform.position, Destination.position, NavMesh.AllAreas, _path))
+            AICharacterInputs aiCharacterInputs = new AICharacterInputs();
+            
+            if ((character.transform.position - destination).magnitude <= 0.2f)
             {
-                _lastValidDestination = Destination.position;
+
+                aiCharacterInputs.MoveVector = Vector3.zero;
+
+                // Apply inputs to character
+                character.SetInputs(ref aiCharacterInputs);
+     
+                
+                return;
+            }            
+            
+            if(NavMesh.CalculatePath(character.transform.position, destination, NavMesh.AllAreas, _path))
+            {
+                _lastValidDestination = destination;
             }
             else
             {
-                NavMesh.CalculatePath(Character.transform.position, _lastValidDestination, NavMesh.AllAreas, _path);
+                NavMesh.CalculatePath(character.transform.position, _lastValidDestination, NavMesh.AllAreas, _path);
             }
 
-            AICharacterInputs characterInputs = new AICharacterInputs();
-
-            int cornersCount = _path.GetCornersNonAlloc(_pathCorners);
-            if (cornersCount > 1)
+            int cornersCount = _path.GetCornersNonAlloc(_pathCorners); //Calculate path corners
+            if (cornersCount >= 1)
             {
                 // Build the CharacterInputs struct
-                characterInputs.MoveVector = (_pathCorners[1] - Character.transform.position).normalized;
+                aiCharacterInputs.MoveVector = (_pathCorners[1] - character.transform.position).normalized;
 
                 // Apply inputs to character
-                Character.SetInputs(ref characterInputs);
+                character.SetInputs(ref aiCharacterInputs);
             }
             else
             {
                 // Build the CharacterInputs struct
-                characterInputs.MoveVector = Vector3.zero;
+                aiCharacterInputs.MoveVector = Vector3.zero;
 
                 // Apply inputs to character
-                Character.SetInputs(ref characterInputs);
+                character.SetInputs(ref aiCharacterInputs);
             }
         }
     }

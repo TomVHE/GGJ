@@ -73,17 +73,17 @@ namespace Core.Movement
         /// <summary>
         /// This is called every frame by Player in order to tell the character what its inputs are.
         /// </summary>
-        public void SetInputs(ref PlayerCharacterInputs inputs)
+        public void SetInputs(ref PlayerCharacterInputs playerInputs)
         {
-            Vector3 _moveInputVector = Vector3.ClampMagnitude(new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward), 1f);
+            Vector3 _moveInputVector = Vector3.ClampMagnitude(new Vector3(playerInputs.MoveAxisRight, 0f, playerInputs.MoveAxisForward), 1f);
 
             float lookInput = 0;
 
-            if (inputs.RotationMethod == RotationMethod.KeyboardRotation)
+            if (playerInputs.RotationMethod == RotationMethod.KeyboardRotation)
             {
-                lookInput = Motor.transform.rotation.y + inputs.MoveAxisRight * 35f; //TODO: Replace hardcoding with proper sensitivity value
+                lookInput = Motor.transform.rotation.y + playerInputs.MoveAxisRight * 25f; //TODO: Replace hardcoding with proper sensitivity value
             }
-            else if (inputs.RotationMethod == RotationMethod.MouseJoystick)
+            else if (playerInputs.RotationMethod == RotationMethod.MouseJoystick)
             {
                 Vector3 mousePosition = new Vector3(Input.mousePosition.x / Screen.width,Input.mousePosition.y / Screen.height, 0);
                 Vector3 screenCenter = new Vector3(0.5f, 0.5f, 0);
@@ -93,10 +93,10 @@ namespace Core.Movement
             
             #region Camera-Rotation
 
-            Vector3 _cameraPlanarDirection = Vector3.ProjectOnPlane(inputs.CameraRotation * Vector3.forward, Motor.CharacterUp).normalized;
+            Vector3 _cameraPlanarDirection = Vector3.ProjectOnPlane(playerInputs.CameraRotation * Vector3.forward, Motor.CharacterUp).normalized;
             if (_cameraPlanarDirection.sqrMagnitude == 0f)
             {
-                _cameraPlanarDirection = Vector3.ProjectOnPlane(inputs.CameraRotation * Vector3.up, Motor.CharacterUp).normalized;
+                _cameraPlanarDirection = Vector3.ProjectOnPlane(playerInputs.CameraRotation * Vector3.up, Motor.CharacterUp).normalized;
             }
             Quaternion cameraPlanarRotation = Quaternion.LookRotation(_cameraPlanarDirection, Motor.CharacterUp);
             
@@ -104,16 +104,27 @@ namespace Core.Movement
             
             #region Character-Rotation
             
+            //LookInputVector = new Vector3(lookInput, 0, 0f);
+            
             Quaternion rotationFromInput = Quaternion.Euler(Motor.CharacterUp * lookInput);
-            Vector3 _characterPlanarDirection = rotationFromInput * Motor.CharacterForward;
-            _characterPlanarDirection = Vector3.Cross(Motor.CharacterUp, Vector3.Cross(_cameraPlanarDirection, Motor.CharacterUp));
+            Vector3 _characterPlanarDirection = Vector3.Cross(Motor.CharacterUp, 
+                Vector3.Cross((rotationFromInput * Motor.CharacterForward), 
+                    Motor.CharacterUp));
             Quaternion characterPlanarRotation = Quaternion.LookRotation(_characterPlanarDirection, Motor.CharacterUp);
+            
+            /*
+            Quaternion rotationFromInput = Quaternion.Euler(FollowTransform.up * (rotationInput.x * RotationSpeed));
+            PlanarDirection = rotationFromInput * PlanarDirection;
+            PlanarDirection = Vector3.Cross(FollowTransform.up, Vector3.Cross(PlanarDirection, FollowTransform.up));
+            Quaternion planarRot = Quaternion.LookRotation(PlanarDirection, FollowTransform.up);
+             */
+            
 
             #endregion
             
             //LookInputVector = new Vector3(lookInput, 0, 0f);
 
-            switch (inputs.RotationMethod)
+            switch (playerInputs.RotationMethod)
             {
                 case (RotationMethod.NoRotation):
                 {
@@ -122,7 +133,7 @@ namespace Core.Movement
                 }
                 case (RotationMethod.KeyboardRotation):
                 {
-                    _moveInputVector = new Vector3(0, _moveInputVector.y, _moveInputVector.z);
+                    //_moveInputVector = new Vector3(0, _moveInputVector.y, _moveInputVector.z);
                     LookInputVector = _characterPlanarDirection;
                     break;
                 }
@@ -139,7 +150,7 @@ namespace Core.Movement
                 }
             }
             
-            switch (inputs.MovementMethod)
+            switch (playerInputs.MovementMethod)
             {
                 case (MovementMethod.StaticForward):
                 {
@@ -163,17 +174,17 @@ namespace Core.Movement
                 }
             }
 
-            MethodOfMovement = inputs.MovementMethod;
-            MethodOfRotation = inputs.RotationMethod;
+            MethodOfMovement = playerInputs.MovementMethod;
+            MethodOfRotation = playerInputs.RotationMethod;
         }
 
         /// <summary>
         /// This is called every frame by AI in order to tell the character what its inputs are
         /// </summary>
-        public void SetInputs(ref AICharacterInputs inputs)
+        public void SetInputs(ref AICharacterInputs aiInputs)
         {
             // Move and look inputs
-            MoveInputVector = inputs.MoveVector;
+            MoveInputVector = aiInputs.MoveVector;
 
             if (MoveInputVector.sqrMagnitude == 0f)
             {

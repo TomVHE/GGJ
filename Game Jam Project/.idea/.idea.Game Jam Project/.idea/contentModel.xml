@@ -12,10 +12,17 @@
         <e p="[Source]" t="Include">
           <e p="Scenes" t="Include">
             <e p="ItsKevinBitch" t="Include">
+              <e p="BriefSpawner.cs" t="Include" />
               <e p="InstantiationManager.cs" t="Include" />
+              <e p="WaveSystem.cs" t="Include" />
             </e>
           </e>
           <e p="Scripts" t="Include">
+            <e p="AI" t="Include">
+              <e p="Letter.cs" t="Include" />
+              <e p="NavAgent.cs" t="Include" />
+              <e p="Parent.cs" t="Include" />
+            </e>
             <e p="Core" t="Include">
               <e p="Juice" t="Include">
                 <e p="JuiceExtensions.cs" t="Include" />
@@ -24,6 +31,7 @@
               </e>
               <e p="Movement" t="Include">
                 <e p="AI.cs" t="Include" />
+                <e p="InteractionManager.cs" t="Include" />
                 <e p="Player.cs" t="Include" />
                 <e p="PlayerCharacterController.cs" t="Include" />
                 <e p="UberCharacterController.cs" t="Include" />
@@ -48,7 +56,19 @@
                 </e>
               </e>
             </e>
+            <e p="GameManager.cs" t="Include" />
           </e>
+        </e>
+        <e p="_Arne" t="Include">
+          <e p="_Scripts" t="Include">
+            <e p="SettingsManager.cs" t="Include" />
+            <e p="UIManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="_Tom" t="Include">
+          <e p="Player.cs" t="Include" />
+          <e p="Trap.cs" t="Include" />
+          <e p="Vacuum.cs" t="Include" />
         </e>
         <e p="AmplifyShaderEditor" t="Include">
           <e p="Changelog.txt" t="Include" />
@@ -723,6 +743,40 @@
           <e p="README.txt" t="Include" />
         </e>
         <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DemiLib" t="Include">
+              <e p="Core" t="Include">
+                <e p="DemiLib.xml" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="DemiEditor.xml" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+            </e>
+            <e p="DOTweenPro" t="Include">
+              <e p="DOTweenAnimation.cs" t="Include" />
+              <e p="DOTweenProShortcuts.cs" t="Include" />
+              <e p="DOTweenTextMeshPro.cs" t="Include" />
+              <e p="DOTweenTk2d.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DOTweenAnimationInspector.cs" t="Include" />
+                <e p="DOTweenPreviewManager.cs" t="Include" />
+              </e>
+              <e p="README.txt" t="Include" />
+            </e>
+            <e p="readme_DOTweenPro.txt" t="Include" />
+          </e>
           <e p="Hellmade" t="Include">
             <e p="Eazy Sound Manager" t="Include">
               <e p="Demo" t="Include">
