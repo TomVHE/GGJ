@@ -5,7 +5,9 @@ using UnityEngine;
 public abstract class Trap : MonoBehaviour
 {
     [SerializeField] protected float duration = 5f; 
+    [SerializeField] protected float Cooldown = 5f; 
 
+    protected bool coolingDown;
     protected bool activated;
 
     private void OnTriggerStay(Collider other)
@@ -17,7 +19,7 @@ public abstract class Trap : MonoBehaviour
                 Effect(other.GetComponent<Letter>());
             }
         }
-        else
+        else if (coolingDown == false)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -31,6 +33,9 @@ public abstract class Trap : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         activated = false;
+        coolingDown = true;
+        yield return new WaitForSeconds(Cooldown);
+        coolingDown = false;
     }
 
     public abstract void Effect(Letter letter);
