@@ -21,18 +21,13 @@ public class InstantiationManager : MonoBehaviour
    }
 
    /// <summary>
-   /// Call to instantiate entity
+   /// Call to instantiate Enemy
    /// </summary>
-   /// <param name="pos"> Position of entity</param>
-   /// <param name="name"> Name of entity object in list</param>
-   public void InstantiateEntity(Transform pos, int type)
-   {
-      print(type);
-      Instantiate(objects[type],pos.position,Quaternion.identity);
-   }
-
+   /// <param name="pos"> Position of Enemy</param>
+   /// <param name="name"> Name of Enemy object in list</param>
    public void InstantiateEnemyType(Transform pos, int range)
    {
-      int index = Random.Range(0,range);
+      WaveSystem.aliveEnemies += 1;
+      Instantiate(objects[range],pos.position,Quaternion.identity);
    }
 }

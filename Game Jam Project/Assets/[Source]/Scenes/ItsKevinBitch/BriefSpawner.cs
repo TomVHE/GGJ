@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class BriefSpawner : MonoBehaviour
 {
-    public void SpawnBrief(int amount, int type)
+    public void SpawnBrief(int type)
     {
-        int toSpawn = amount;
-        while(toSpawn != 0)
-        {
-            toSpawn -= 1;
-            InstantiationManager.instance.InstantiateEntity(gameObject.transform,type);
-        }
+        InstantiationManager.instance.InstantiateEnemyType(gameObject.transform, type);
     }
 }
