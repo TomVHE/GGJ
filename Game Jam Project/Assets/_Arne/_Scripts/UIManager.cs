@@ -7,9 +7,9 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     //testing
-    public bool testbool;
-    public RectTransform testRect;
-    public bool go;
+    //public bool testbool;
+    //public RectTransform testRect;
+    //public bool go;
 
 
     //main menu
@@ -23,33 +23,28 @@ public class UIManager : MonoBehaviour
     public RectTransform ingame;
     public int score;
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI timeText;
+    //public TextMeshProUGUI timeText;
         //happiness meter
     public float happiness;
-    public Slider happinessSlider;
-    public Color happyColor, neutralColor, sadColor;
-    public Image happyFace, neutralFace, sadFace;
+    public Image happinessFill;
+    public TextMeshProUGUI happinessText;
+    public Sprite happyFace, neutralFace, sadFace;
+        //paused
+    public bool paused;
+    public RectTransform pausedMenu;
 
     //game over
     public RectTransform gameOver; //has mainmenu button and replay button
 
+    public Gradient gradient;
 
 
 
     void Start () 
     {
         //subscribe to score and happiness
-        //GameManager.Instance.ScoreChanged += AddPoint;
-        //Parent.Instance.HappinessChanged += UpdateHappiness;
-    }
-    // Update is called once per frame
-    void Update ()
-    {
-        if(go)
-        {
-            ElementState(testRect, testbool);
-            go = false;
-        }
+        GameManager.Instance.ScoreChanged += AddPoint;
+        Parent.Instance.HappinessChanged += UpdateHappiness;
     }
     public void ElementState (RectTransform element, bool setstate) 
     {
@@ -62,10 +57,44 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateHappiness (float happy)
     {
-        //update the happiness
-        //set face
-        //set slider
-        
+        if(happy > 0f && happy < 33f)
+        {
+            happinessFill.sprite = sadFace;
+        }
+        if(happy > 33f && happy < 66f)
+        {
+            happinessFill.sprite = neutralFace;
+        }
+        if(happy > 66f && happy < 100f)
+        {
+            happinessFill.sprite = happyFace;
+        }
+        happinessFill.fillAmount = happy/100f;
+        happinessFill.color = gradient.Evaluate(happiness/100f);
+    }
+    public void QuitGame ()
+    {
+        Application.Quit();   
+    }
+    public void PressEscape ()
+    {
+        //stop time and activate pause
+        if(Input.GetButtonDown("Escape"))
+        {
+            paused = !paused;
+            if(paused)
+            {
+                //turn it on
+                pausedMenu.gameObject.SetActive(true);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                pausedMenu.gameObject.SetActive(false);
+                Time.timeScale = 1;
+            }
+
+        }
     }
     /* 
     public void UpdateTimer (float time)
