@@ -17,6 +17,10 @@ public class Letter : NavAgent
     private void Update()
     {
         MoveTo(target.position);
+       /*  if(Input.GetButtonDown("Jump"))
+        {
+            Death();
+        }*/
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -32,7 +36,6 @@ public class Letter : NavAgent
     public void Death()
     {
         GameManager.Instance.KilledLetters++;
-        GameManager.Instance.LettersSpawned--;
         SpawnManager.Instance.LettersAlive--;
         Destroy(gameObject);
     }

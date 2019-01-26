@@ -23,6 +23,7 @@ public class GameManager : SerializedSingleton<GameManager>
         set
         {
             lettersSpawned = value;
+            Debug.Log(lettersSpawned);
             Spawned(lettersSpawned);
         }
     }

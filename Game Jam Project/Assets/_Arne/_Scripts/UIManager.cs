@@ -21,12 +21,14 @@ public class UIManager : MonoBehaviour
         
     //ingame
     public RectTransform ingame;
-    public int score;
+    public int killed;
+    public int spawned;
     public TextMeshProUGUI scoreText;
     //public TextMeshProUGUI timeText;
         //happiness meter
     public float happiness;
     public Image happinessFill;
+    public Image happinessExpression;
     public TextMeshProUGUI happinessText;
     public Sprite happyFace, neutralFace, sadFace;
         //paused
@@ -43,8 +45,10 @@ public class UIManager : MonoBehaviour
     void Start () 
     {
         //subscribe to score and happiness
-        //GameManager.Instance.ScoreChanged += AddPoint;
-       // Parent.Instance.HappinessChanged += UpdateHappiness;
+        GameManager.Instance.Killed += AddKills;
+        GameManager.Instance.Spawned += AddSpawned;
+        Parent.Instance.HappinessChanged += UpdateHappiness;
+
     }
     void Update ()
     {
@@ -54,25 +58,33 @@ public class UIManager : MonoBehaviour
     {
         element.gameObject.SetActive(setstate);
     }
-    public void AddPoint (int point)
+    public void AddSpawned (int point)
     {
-        score += point;
-        scoreText.text = "Score: " + score;
+        spawned = point;    //CHANGE SCORE
+        scoreText.text = killed + " <size=125%>/" + spawned;
+    }
+    public void AddKills (int point)
+    {
+        killed += point;
+        scoreText.text = killed + " <size=125%>/" + spawned;
+        // scoreText.text = 12 
     }
     public void UpdateHappiness (float happy)
     {
         if(happy > 0f && happy < 33f)
         {
-            happinessFill.sprite = sadFace;
+            happinessExpression.sprite = sadFace;
         }
         if(happy > 33f && happy < 66f)
         {
-            happinessFill.sprite = neutralFace;
+            happinessExpression.sprite = neutralFace;
         }
         if(happy > 66f && happy < 100f)
         {
-            happinessFill.sprite = happyFace;
+            happinessExpression.sprite = happyFace;
         }
+        //color doesnt change and number doesnt either
+        Debug.LogError("color doesnt change and number doesnt either");
         happinessFill.fillAmount = happy/100f;
         happinessFill.color = gradient.Evaluate(happiness/100f);
     }
