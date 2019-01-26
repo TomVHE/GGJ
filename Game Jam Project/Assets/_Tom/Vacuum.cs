@@ -11,16 +11,21 @@ public class Vacuum : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetButton("Fire1"))
+        if (other.CompareTag("Letter"))
         {
-            if (other.CompareTag("Letter"))
-            {
-                forceDirection = transform.position - other.transform.position;
+            forceDirection = transform.position - other.transform.position;
 
-                rb = other.transform.GetComponent<Rigidbody>();
+            rb = other.transform.GetComponent<Rigidbody>();
 
-                rb.AddForce(forceDirection.normalized * pullForce * Time.deltaTime);
-            }
+            rb.AddForce(forceDirection.normalized * pullForce * Time.deltaTime);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Letter"))
+        {
+            collision.transform.GetComponent<Letter>().Death();
         }
     }
 }

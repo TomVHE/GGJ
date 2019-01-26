@@ -27,4 +27,10 @@ public class Letter : NavAgent
             Destroy(gameObject);
         }
     }
+
+    public void Death()
+    {
+        GameManager.Instance.Score++;
+        Destroy(gameObject);
+    }
 }
