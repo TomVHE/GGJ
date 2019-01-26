@@ -656,6 +656,136 @@ ModelImporter:
     4300254: Cylinder022
     4300256: Cylinder023
     4300258: Cylinder024
+    6400000: Bed_Blankets
+    6400002: Bed_Frame
+    6400004: Bed_Matras
+    6400006: Bed_Wheels
+    6400008: Box001
+    6400010: Box002
+    6400012: Box003
+    6400014: Box004
+    6400016: Box005
+    6400018: Box006
+    6400020: Box007
+    6400022: Box009
+    6400024: Box010
+    6400026: Box011
+    6400028: Box061
+    6400030: Box062
+    6400032: Box063
+    6400034: Box064
+    6400036: Box065
+    6400038: Box066
+    6400040: Box068
+    6400042: Box069
+    6400044: Box070
+    6400046: Box071
+    6400048: Box072
+    6400050: Box073
+    6400052: Box074
+    6400054: Box075
+    6400056: Box076
+    6400058: Box077
+    6400060: Box078
+    6400062: Box079
+    6400064: Box080
+    6400066: Box081
+    6400068: Box082
+    6400070: Box083
+    6400072: Box084
+    6400074: Box085
+    6400076: Box086
+    6400078: Box087
+    6400080: Box088
+    6400082: Box089
+    6400084: Box091
+    6400086: Box092
+    6400088: Box093
+    6400090: Box094
+    6400092: Box095
+    6400094: Box096
+    6400096: Box097
+    6400098: Box098
+    6400100: Box099
+    6400102: Box100
+    6400104: Box101
+    6400106: Box102
+    6400108: Box103
+    6400110: Box104
+    6400112: Box105
+    6400114: Chest_Base
+    6400116: Chest_Trim
+    6400118: Countertop_Sheet
+    6400120: Cylinder003
+    6400122: Cylinder004
+    6400124: Cylinder005
+    6400126: Cylinder006
+    6400128: Cylinder007
+    6400130: Cylinder008
+    6400132: Cylinder009
+    6400134: Cylinder010
+    6400136: Cylinder011
+    6400138: Cylinder012
+    6400140: Cylinder013
+    6400142: Cylinder014
+    6400144: Cylinder015
+    6400146: Cylinder016
+    6400148: Cylinder017
+    6400150: Cylinder018
+    6400152: Cylinder019
+    6400154: Cylinder020
+    6400156: Cylinder021
+    6400158: Cylinder022
+    6400160: Cylinder023
+    6400162: Cylinder024
+    6400164: Door
+    6400166: Door_Clapper
+    6400168: Door_Clapper_Post
+    6400170: Door_Glass
+    6400172: Door_Knob
+    6400174: Door_Post
+    6400176: Floor
+    6400178: Floor001
+    6400180: Floor002
+    6400182: Living_Room_wall
+    6400184: LivingToGameRoom
+    6400186: Object001
+    6400188: Object003
+    6400190: Object005
+    6400192: Object007
+    6400194: Plane001
+    6400196: Plane002
+    6400198: Plane003
+    6400200: Wall
+    6400202: Wall001
+    6400204: Wall002
+    6400206: Wall_Door
+    6400208: Wall_Door001
+    6400210: Wall_Door002
+    6400212: Wall_Door003
+    6400214: Wall_Door004
+    6400216: Wall_Door005
+    6400218: Wall_Door006
+    6400220: Wall_Door007
+    6400222: Wall_Door008
+    6400224: Wall_Door009
+    6400226: Wall_Door010
+    6400228: Wall_Door011
+    6400230: Wall_Door012
+    6400232: Wall_Door013
+    6400234: Wall_Door015
+    6400236: Wall_Door016
+    6400238: Wall_Door017
+    6400240: Wall_Door018
+    6400242: Wall_Door019
+    6400244: Wall_Door020
+    6400246: Wall_Door021
+    6400248: Wall_Door022
+    6400250: Wall_Door023
+    6400252: Window_Frame
+    6400254: Window_Frame001
+    6400256: Window_Glass
+    6400258: Window_Glass001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -689,7 +819,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -718,7 +848,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

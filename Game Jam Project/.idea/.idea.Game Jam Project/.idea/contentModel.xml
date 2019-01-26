@@ -10,13 +10,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="[Source]" t="Include">
-          <e p="Scenes" t="Include">
-            <e p="ItsKevinBitch" t="Include">
-              <e p="BriefSpawner.cs" t="Include" />
-              <e p="InstantiationManager.cs" t="Include" />
-              <e p="WaveSystem.cs" t="Include" />
-            </e>
-          </e>
           <e p="Scripts" t="Include">
             <e p="AI" t="Include">
               <e p="Letter.cs" t="Include" />
@@ -24,6 +17,9 @@
               <e p="Parent.cs" t="Include" />
             </e>
             <e p="Core" t="Include">
+              <e p="Attacks" t="Include">
+                <e p="Weapon.cs" t="Include" />
+              </e>
               <e p="Juice" t="Include">
                 <e p="JuiceExtensions.cs" t="Include" />
                 <e p="Kickback.cs" t="Include" />
@@ -34,6 +30,10 @@
                 <e p="InteractionManager.cs" t="Include" />
                 <e p="Player.cs" t="Include" />
                 <e p="PlayerCharacterController.cs" t="Include" />
+                <e p="ThirdPerson" t="Include">
+                  <e p="ThirdPersonCharacterController.cs" t="Include" />
+                  <e p="ThirdPersonPlayer.cs" t="Include" />
+                </e>
                 <e p="UberCharacterController.cs" t="Include" />
               </e>
               <e p="Utilities" t="Include">
@@ -57,12 +57,24 @@
               </e>
             </e>
             <e p="GameManager.cs" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="CrossFadingLod.shader" t="Include" />
+              <e p="CrossFadingLodDither.shader" t="Include" />
+            </e>
           </e>
         </e>
         <e p="_Arne" t="Include">
           <e p="_Scripts" t="Include">
             <e p="SettingsManager.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="_Kevin" t="Include">
+          <e p="ItsKevinBitch" t="Include">
+            <e p="BriefSpawner.cs" t="Include" />
+            <e p="FirePlace.cs" t="Include" />
+            <e p="InstantiationManager.cs" t="Include" />
+            <e p="WaveSystem.cs" t="Include" />
           </e>
         </e>
         <e p="_Tom" t="Include">
@@ -743,39 +755,52 @@
           <e p="README.txt" t="Include" />
         </e>
         <e p="Plugins" t="Include">
-          <e p="Demigiant" t="Include">
-            <e p="DemiLib" t="Include">
-              <e p="Core" t="Include">
-                <e p="DemiLib.xml" t="Include" />
-                <e p="Editor" t="Include">
-                  <e p="DemiEditor.xml" t="Include" />
-                </e>
+          <e p="ConsolePro" t="Include">
+            <e p="ConsoleProDebug.cs" t="Include" />
+            <e p="Remote" t="Include">
+              <e p="ConsoleProRemoteServer.cs" t="Include" />
+              <e p="LiteNetLib" t="Include">
+                <e p="FastBitConverter.cs" t="Include" />
+                <e p="INetEventListener.cs" t="Include" />
+                <e p="NatPunchModule.cs" t="Include" />
+                <e p="NetConstants.cs" t="Include" />
+                <e p="NetDataReader.cs" t="Include" />
+                <e p="NetDataWriter.cs" t="Include" />
+                <e p="NetDebug.cs" t="Include" />
+                <e p="NetEndPoint.cs" t="Include" />
+                <e p="NetManager.cs" t="Include" />
+                <e p="NetPacket.cs" t="Include" />
+                <e p="NetPacketPool.cs" t="Include" />
+                <e p="NetPeer.cs" t="Include" />
+                <e p="NetPeerCollection.cs" t="Include" />
+                <e p="NetSerializer.cs" t="Include" />
+                <e p="NetSocket.cs" t="Include" />
+                <e p="NetThread.cs" t="Include" />
+                <e p="NetUtils.cs" t="Include" />
+                <e p="NtpSyncModule.cs" t="Include" />
+                <e p="ReliableChannel.cs" t="Include" />
+                <e p="SequencedChannel.cs" t="Include" />
+                <e p="SimpleChannel.cs" t="Include" />
               </e>
             </e>
-            <e p="DOTween" t="Include">
-              <e p="Modules" t="Include">
-                <e p="DOTweenModuleAudio.cs" t="Include" />
-                <e p="DOTweenModulePhysics.cs" t="Include" />
-                <e p="DOTweenModulePhysics2D.cs" t="Include" />
-                <e p="DOTweenModuleSprite.cs" t="Include" />
-                <e p="DOTweenModuleUI.cs" t="Include" />
-                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
-                <e p="DOTweenModuleUtils.cs" t="Include" />
-              </e>
-              <e p="README.txt" t="Include" />
+          </e>
+          <e p="Fullscreen" t="Include">
+            <e p="Editor" t="Include">
+              <e p="FocusedWindowFullscreen.cs" t="Include" />
+              <e p="FullscreenOnPlay.cs" t="Include" />
+              <e p="FullscreenPreferences.cs" t="Include" />
+              <e p="FullscreenRects.cs" t="Include" />
+              <e p="FullscreenUtility.cs" t="Include" />
+              <e p="FullscreenView.cs" t="Include" />
+              <e p="GameViewFullscreen.cs" t="Include" />
+              <e p="MainViewFullscreen.cs" t="Include" />
+              <e p="MenuItems.cs" t="Include" />
+              <e p="PrefItem.cs" t="Include" />
+              <e p="ReflectionUtility.cs" t="Include" />
+              <e p="SceneViewFullscreen.cs" t="Include" />
+              <e p="Shortcut.cs" t="Include" />
+              <e p="Tracker.cs" t="Include" />
             </e>
-            <e p="DOTweenPro" t="Include">
-              <e p="DOTweenAnimation.cs" t="Include" />
-              <e p="DOTweenProShortcuts.cs" t="Include" />
-              <e p="DOTweenTextMeshPro.cs" t="Include" />
-              <e p="DOTweenTk2d.cs" t="Include" />
-              <e p="Editor" t="Include">
-                <e p="DOTweenAnimationInspector.cs" t="Include" />
-                <e p="DOTweenPreviewManager.cs" t="Include" />
-              </e>
-              <e p="README.txt" t="Include" />
-            </e>
-            <e p="readme_DOTweenPro.txt" t="Include" />
           </e>
           <e p="Hellmade" t="Include">
             <e p="Eazy Sound Manager" t="Include">
