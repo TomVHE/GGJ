@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Parent : MonoBehaviour
+public class Parent : NavAgent
 {
-    public static Parent instance;
+    public static Parent Instance;
     public event Action<float> HappinessChanged;
     public float Happiness
     {
@@ -22,11 +22,12 @@ public class Parent : MonoBehaviour
 
     private float happiness;
 
-    private void Start()
+    private void Awake()
     {
-        if(instance == null)
+        if(Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
+        happiness = 100f;
     }
 }
