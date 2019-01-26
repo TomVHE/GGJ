@@ -16,7 +16,7 @@ public class InstantiationManager : MonoBehaviour
       }
       else if (instance != this)
       {
-         Destroy(this.gameObject);
+         Destroy(this);
       }
    }
 

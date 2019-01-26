@@ -6,16 +6,36 @@ using Core.Utilities;
 
 public class GameManager : SerializedSingleton<GameManager>
 {
-    public event Action<int> ScoreChanged;
-    public int Score
+    public event Action<int> Killed;
+    public event Action<int> Spawned;
+    public int KilledLetters
     {
-        get => score;
+        get => killedLetters;
         set
         {
-            score = value;
-            ScoreChanged(score);
+            killedLetters = value;
+            Killed(killedLetters);
         }
     }
-
-    private int score;
+    public int LettersSpawned
+    {
+        get => lettersSpawned;
+        set
+        {
+            lettersSpawned = value;
+            Spawned(lettersSpawned);
+        }
+    }
+    public int CurrentWave
+    {
+        get => currentWave;
+        set
+        {
+            currentWave = value;
+            Debug.Log("Wave changed! Current wave: " + currentWave);
+        }
+    }
+    private int killedLetters;
+    private int lettersSpawned;
+    private int currentWave = 1;
 }

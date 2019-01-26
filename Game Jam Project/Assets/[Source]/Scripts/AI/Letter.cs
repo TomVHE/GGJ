@@ -25,12 +25,15 @@ public class Letter : NavAgent
         {
             Parent.Instance.Happiness += happinessGain;
             Destroy(gameObject);
+            SpawnManager.Instance.LettersAlive--;
         }
     }
 
     public void Death()
     {
-        GameManager.Instance.Score++;
+        GameManager.Instance.KilledLetters++;
+        GameManager.Instance.LettersSpawned--;
+        SpawnManager.Instance.LettersAlive--;
         Destroy(gameObject);
     }
 }
