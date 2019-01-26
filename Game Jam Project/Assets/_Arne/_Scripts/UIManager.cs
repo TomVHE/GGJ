@@ -43,8 +43,12 @@ public class UIManager : MonoBehaviour
     void Start () 
     {
         //subscribe to score and happiness
-        GameManager.Instance.ScoreChanged += AddPoint;
-        Parent.Instance.HappinessChanged += UpdateHappiness;
+        //GameManager.Instance.ScoreChanged += AddPoint;
+       // Parent.Instance.HappinessChanged += UpdateHappiness;
+    }
+    void Update ()
+    {
+        PressEscape();
     }
     public void ElementState (RectTransform element, bool setstate) 
     {
@@ -78,22 +82,22 @@ public class UIManager : MonoBehaviour
     }
     public void PressEscape ()
     {
-        //stop time and activate pause
         if(Input.GetButtonDown("Escape"))
         {
-            paused = !paused;
-            if(paused)
-            {
-                //turn it on
-                pausedMenu.gameObject.SetActive(true);
-                Time.timeScale = 0;
-            }
-            else
-            {
-                pausedMenu.gameObject.SetActive(false);
-                Time.timeScale = 1;
-            }
-
+            PausedCheck();
+        }
+    }
+    public void PausedCheck ()
+    {
+        paused = !paused;
+        pausedMenu.gameObject.SetActive(paused);
+        if(paused)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
         }
     }
     /* 
