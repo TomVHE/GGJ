@@ -96,8 +96,8 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   distanceFade:
-    overrideState: 0
-    value: 0.5
+    overrideState: 1
+    value: 0
   vignette:
     overrideState: 0
     value: 0.5

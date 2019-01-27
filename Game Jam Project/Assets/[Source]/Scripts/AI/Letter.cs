@@ -17,10 +17,10 @@ public class Letter : NavAgent
     private void Update()
     {
         MoveTo(target.position);
-       /*  if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump"))
         {
             Death();
-        }*/
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

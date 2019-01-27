@@ -14,6 +14,7 @@ public class GameManager : SerializedSingleton<GameManager>
         set
         {
             killedLetters = value;
+            Debug.Log("K" + killedLetters);
             Killed(killedLetters);
         }
     }
@@ -23,7 +24,7 @@ public class GameManager : SerializedSingleton<GameManager>
         set
         {
             lettersSpawned = value;
-            Debug.Log(lettersSpawned);
+            Debug.Log("S" + lettersSpawned);
             Spawned(lettersSpawned);
         }
     }

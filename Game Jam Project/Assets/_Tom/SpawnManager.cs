@@ -13,7 +13,7 @@ public class SpawnManager : MonoBehaviour
         set
         {
             lettersAlive = value;
-            GameManager.Instance.LettersSpawned--;
+            //GameManager.Instance.LettersSpawned--;
         }
     }
     
