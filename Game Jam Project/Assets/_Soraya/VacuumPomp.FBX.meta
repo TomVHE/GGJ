@@ -1,56 +1,36 @@
 fileFormatVersion: 2
-guid: fafa266935bf3c241847c13079633642
+guid: 4ed028fdbddec1845a25487a69c3f195
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Bag
-    100002: Belt
-    100004: //RootNode
-    100006: Dot
-    100008: Eyes
-    100010: Face001
-    100012: Hat
-    100014: Lints
-    100016: Sphere003
-    100018: Vacuum
-    400000: Bag
-    400002: Belt
-    400004: //RootNode
-    400006: Dot
-    400008: Eyes
-    400010: Face001
-    400012: Hat
-    400014: Lints
-    400016: Sphere003
-    400018: Vacuum
+    100000: Body
+    100002: Bone001
+    100004: Bone002
+    100006: Bone003
+    100008: Bone004
+    100010: Bone005
+    100012: Vacuum
+    100014: Vacuum End
+    100016: //RootNode
+    400000: Body
+    400002: Bone001
+    400004: Bone002
+    400006: Bone003
+    400008: Bone004
+    400010: Bone005
+    400012: Vacuum
+    400014: Vacuum End
+    400016: //RootNode
     2100000: No Name
-    2300000: Bag
-    2300002: Belt
-    2300004: Dot
-    2300006: Eyes
-    2300008: Face001
-    2300010: Hat
-    2300012: Lints
-    2300014: Sphere003
-    2300016: Vacuum
-    3300000: Bag
-    3300002: Belt
-    3300004: Dot
-    3300006: Eyes
-    3300008: Face001
-    3300010: Hat
-    3300012: Lints
-    3300014: Sphere003
-    3300016: Vacuum
-    4300000: Belt
-    4300002: Bag
-    4300004: Hat
-    4300006: Dot
-    4300008: Vacuum
-    4300010: Lints
-    4300012: Face001
-    4300014: Eyes
-    4300016: Sphere003
+    2100002: 'Material #36'
+    2300000: Vacuum
+    2300002: Vacuum End
+    3300000: Vacuum
+    3300002: Vacuum End
+    4300000: Vacuum End
+    4300002: Vacuum
+    9500000: //RootNode
+    13700000: Vacuum
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -104,7 +84,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -131,7 +111,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

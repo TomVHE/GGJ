@@ -78,7 +78,9 @@
           </e>
         </e>
         <e p="_Tom" t="Include">
+          <e p="MovementAlpha.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="SpawnManager.cs" t="Include" />
           <e p="Trap.cs" t="Include" />
           <e p="Vacuum.cs" t="Include" />
         </e>
