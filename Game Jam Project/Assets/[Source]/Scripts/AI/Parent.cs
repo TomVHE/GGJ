@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Parent : NavAgent
 {
+    public float remainingtime, randomNumber, randomTime;
+    public int min = 20, max = 60;
+    public List<Transform> checkpoints = new List<Transform>();
+
+
     public static Parent Instance;
     public event Action<float> HappinessChanged;
     public float Happiness
@@ -35,5 +40,26 @@ public class Parent : NavAgent
             Instance = this;
         }
         happiness = 100f;
+    }
+    void Update() 
+    {
+        Timer();
+    }
+    void Timer()
+    {
+        if(remainingtime <= 0f)
+        {
+            MoveToCheckpoint();
+            randomNumber = UnityEngine.Random.Range(min, max);
+            remainingtime = randomTime;
+        }
+        remainingtime -= Time.deltaTime;
+
+    }
+    void MoveToCheckpoint()
+    {
+        int i = UnityEngine.Random.Range(0, checkpoints.Count);
+        Vector3 pos = checkpoints[i].position;
+        MoveTo(pos);
     }
 }
