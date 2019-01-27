@@ -17,6 +17,10 @@ public class SpawnManager : MonoBehaviour
         set
         {
             lettersAlive = value;
+            if(lettersAlive < 0)
+            {
+                lettersAlive = 0;
+            }
             LivingLetters(lettersAlive);
         }
     }
@@ -56,7 +60,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Spawn();
         }

@@ -909,11 +909,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4698896738195773684, guid: b5bd6c6e0c711664d843d92ad5083632,
-        type: 3}
-      propertyPath: m_Name
-      value: _Managers_
-      objectReference: {fileID: 0}
     - target: {fileID: 4698896738195773686, guid: b5bd6c6e0c711664d843d92ad5083632,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -968,6 +963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698896738195773684, guid: b5bd6c6e0c711664d843d92ad5083632,
+        type: 3}
+      propertyPath: m_Name
+      value: _Managers_
       objectReference: {fileID: 0}
     - target: {fileID: 4698896738195773688, guid: b5bd6c6e0c711664d843d92ad5083632,
         type: 3}
@@ -1128,11 +1128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3702129853457514665, guid: 741f2b001f65860428eb7475adfb5607,
-        type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 3702129853457514669, guid: 741f2b001f65860428eb7475adfb5607,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1237,6 +1232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702129853457514665, guid: 741f2b001f65860428eb7475adfb5607,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 6955394969480454643, guid: 741f2b001f65860428eb7475adfb5607,
         type: 3}

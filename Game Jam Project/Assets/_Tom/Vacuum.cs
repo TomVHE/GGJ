@@ -20,12 +20,4 @@ public class Vacuum : MonoBehaviour
             rb.AddForce(forceDirection.normalized * pullForce * Time.deltaTime);
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.CompareTag("Letter"))
-        {
-            collision.transform.GetComponent<Letter>().Death();
-        }
-    }
 }
