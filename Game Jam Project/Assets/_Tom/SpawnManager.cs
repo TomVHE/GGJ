@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,13 +7,16 @@ public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager Instance;
 
+    public event Action<int> LivingLetters;
+
+
     public int LettersAlive
     {
         get => lettersAlive;
         set
         {
             lettersAlive = value;
-            //GameManager.Instance.LettersSpawned--;
+            LivingLetters(lettersAlive);
         }
     }
     
@@ -41,7 +44,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Spawn()
     {
-        if (lettersAlive == 0 && !spawning)
+        if (lettersAlive == 0 && !spawning && !GameManager.Instance.gameOver)
         {
             StartCoroutine(Spawning());
         }
@@ -64,8 +67,8 @@ public class SpawnManager : MonoBehaviour
         while (spawnNumber > 0)
         {
             spawnNumber--;
-            lettersAlive++;
-            Instantiate(letter, spawnPositions[Random.Range(0, spawnPositions.Count)].position, Quaternion.identity);
+            LettersAlive++;
+            Instantiate(letter, spawnPositions[UnityEngine.Random.Range(0, spawnPositions.Count)].position, Quaternion.identity);
             yield return new WaitForSeconds(spawnTime);
         }
         spawning = false;

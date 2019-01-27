@@ -16,6 +16,12 @@ public class Parent : NavAgent
         set
         {
             happiness = value;
+            if(happiness <= 0)
+            {
+                happiness = 0;
+                GameManager.Instance.gameOver = true;
+                Debug.LogError("GAME OVER!");
+            }
             HappinessChanged(happiness);
         }
     }

@@ -39,16 +39,17 @@ public class UIManager : MonoBehaviour
     public RectTransform gameOver; //has mainmenu button and replay button
 
     public Gradient gradient;
+    public TextMeshProUGUI fillText;
 
 
 
     void Start () 
     {
         //subscribe to score and happiness
-        GameManager.Instance.Killed += AddKills;
-        GameManager.Instance.Spawned += AddSpawned;
+        //GameManager.Instance.Killed += AddKills;
+        //GameManager.Instance.Spawned += AddSpawned;
+        SpawnManager.Instance.LivingLetters += UpdateLetterCount;
         Parent.Instance.HappinessChanged += UpdateHappiness;
-
     }
     void Update ()
     {
@@ -57,6 +58,10 @@ public class UIManager : MonoBehaviour
     public void ElementState (RectTransform element, bool setstate) 
     {
         element.gameObject.SetActive(setstate);
+    }
+    public void UpdateLetterCount(int count)
+    {
+        scoreText.text = "letters:\n<size=25><color=blue>" + count +"</size>";
     }
     public void AddSpawned (int point)
     {
@@ -83,10 +88,9 @@ public class UIManager : MonoBehaviour
         {
             happinessExpression.sprite = happyFace;
         }
-        //color doesnt change and number doesnt either
-        Debug.LogError("color doesnt change and number doesnt either");
         happinessFill.fillAmount = happy/100f;
-        happinessFill.color = gradient.Evaluate(happiness/100f);
+        happinessFill.color = gradient.Evaluate(happy/100f);
+        fillText.text = happy + "\n<size=15>%</size>";
     }
     public void QuitGame ()
     {

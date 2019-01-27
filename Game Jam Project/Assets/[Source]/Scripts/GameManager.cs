@@ -8,6 +8,9 @@ public class GameManager : SerializedSingleton<GameManager>
 {
     public event Action<int> Killed;
     public event Action<int> Spawned;
+
+    public bool gameOver;
+
     public int KilledLetters
     {
         get => killedLetters;
@@ -15,7 +18,7 @@ public class GameManager : SerializedSingleton<GameManager>
         {
             killedLetters = value;
             Debug.Log("K" + killedLetters);
-            Killed(killedLetters);
+            //Killed(killedLetters);
         }
     }
     public int LettersSpawned
@@ -25,7 +28,7 @@ public class GameManager : SerializedSingleton<GameManager>
         {
             lettersSpawned = value;
             Debug.Log("S" + lettersSpawned);
-            Spawned(lettersSpawned);
+            //Spawned(lettersSpawned);
         }
     }
     public int CurrentWave
