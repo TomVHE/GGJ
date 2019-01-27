@@ -40,6 +40,7 @@ public class Parent : NavAgent
             Instance = this;
         }
         happiness = 100f;
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
     void Update() 
     {
@@ -50,7 +51,7 @@ public class Parent : NavAgent
         if(remainingtime <= 0f)
         {
             MoveToCheckpoint();
-            randomNumber = UnityEngine.Random.Range(min, max);
+            randomTime = UnityEngine.Random.Range(min, max);
             remainingtime = randomTime;
         }
         remainingtime -= Time.deltaTime;

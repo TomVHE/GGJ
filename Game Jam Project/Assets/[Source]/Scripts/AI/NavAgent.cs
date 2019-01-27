@@ -6,11 +6,12 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class NavAgent : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    protected NavMeshAgent agent;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        print(agent);
     }
 
     protected void MoveTo(Vector3 position)
@@ -18,6 +19,10 @@ public class NavAgent : MonoBehaviour
         if (agent)
         {
             agent.SetDestination(position);
+        }
+        else
+        {
+            Debug.Log("No agent :<");
         }
     }
 
