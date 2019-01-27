@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11c4b4fd-a8bc-4604-8ac0-b46254009e88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Source]/Scenes/NavmeshTest/NavMeshTest.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Source]/Scenes/ThirdPerson/ThirdPersonTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Source]/Scenes/ThirdPerson/ThirdPersonTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Attacks/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Attacks/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Soraya/Character.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Soraya/Character.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Soraya/Placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Soraya/Placeholder.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Source]/Scenes/MAIN/MAIN.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Source]/Scenes/MAIN/MAIN.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Source]/Scenes/Testostertwo/Testostertwo/NavMesh-Level.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Source]/Scenes/Testostertwo/Testostertwo/NavMesh-Level.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tom/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tom/SpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Attacks/Weapon.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="557">
@@ -74,6 +70,30 @@
                 <marker date="1548579626781" expanded="true" signature="1054:1163" ph="{...}" />
                 <marker date="1548579626781" expanded="true" signature="1206:1565" ph="{...}" />
                 <marker date="1548579626781" expanded="true" signature="1266:1559" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/_Tom/SpawnManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+              <folding>
+                <marker date="1548586530383" expanded="true" signature="6:121" ph="..." />
+                <marker date="1548586530383" expanded="true" signature="164:1903" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="282:430" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="329:424" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="874:1069" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="910:959" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="988:1063" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="1095:1245" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="1179:1239" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="1272:1362" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="1315:1356" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="1398:1901" ph="{...}" />
+                <marker date="1548586530383" expanded="true" signature="1608:1869" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -247,6 +267,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Movement/ThirdPerson/ThirdPersonCharacterController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Attributes Overview/Scripts/MinMaxSliderExamples.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Movement/PlayerCharacterController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Tom/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Attacks/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Attributes Overview/Scripts/EnumPagingExamples.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Attributes Overview/Scripts/ProgressBarExamples.cs" root0="FORCE_HIGHLIGHTING" />
@@ -273,6 +294,7 @@
         <option value="$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Movement/ThirdPerson/ThirdPersonPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Movement/ThirdPerson/ThirdPersonCharacterController.cs" />
         <option value="$PROJECT_DIR$/Assets/[Source]/Scripts/Core/Attacks/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Tom/SpawnManager.cs" />
       </list>
     </option>
   </component>
@@ -341,12 +363,12 @@
       <updated>1548455472949</updated>
       <workItem from="1548455474777" duration="620000" />
       <workItem from="1548488670120" duration="33878000" />
-      <workItem from="1548579085625" duration="2144000" />
+      <workItem from="1548579085625" duration="2192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36642000" />
+    <option name="totallyTimeSpent" value="36690000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1401,6 +1423,28 @@
             <marker date="1548579626781" expanded="true" signature="1054:1163" ph="{...}" />
             <marker date="1548579626781" expanded="true" signature="1206:1565" ph="{...}" />
             <marker date="1548579626781" expanded="true" signature="1266:1559" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Tom/SpawnManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <marker date="1548586530383" expanded="true" signature="6:121" ph="..." />
+            <marker date="1548586530383" expanded="true" signature="164:1903" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="282:430" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="329:424" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="874:1069" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="910:959" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="988:1063" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="1095:1245" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="1179:1239" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="1272:1362" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="1315:1356" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="1398:1901" ph="{...}" />
+            <marker date="1548586530383" expanded="true" signature="1608:1869" ph="{...}" />
           </folding>
         </state>
       </provider>

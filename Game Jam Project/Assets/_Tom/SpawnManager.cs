@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class SpawnManager : MonoBehaviour
         }
     }
     
+    #if UNITY_EDITOR
+    [Required, AssetsOnly]
+    #endif    
     [SerializeField] private Transform letter;
     [SerializeField] private List<Transform> spawnPositions = new List<Transform>();
     [SerializeField] private int baseNumber = 0;
